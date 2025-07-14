@@ -870,9 +870,11 @@ function checkWord(word) {
     document.getElementById(
       "result"
     ).textContent = `C.A.S.S.I.E. може сказати слово "${word}".`;
+    document.getElementById("result").style.color = "green";
   } else {
     document.getElementById(
       "result"
     ).textContent = `C.A.S.S.I.E. не може сказати слово "${word}".`;
+    document.getElementById("result").style.color = "red";
   }
 }
