@@ -860,8 +860,13 @@ function checkWord(word) {
         "UNAVAILABLE"
     ];
     // Перевірка, чи слово є в списку
-    if (validWords.includes(word.trim().toUpperCase())) document.getElementById("result").textContent = `C.A.S.S.I.E. \u{43C}\u{43E}\u{436}\u{435} \u{441}\u{43A}\u{430}\u{437}\u{430}\u{442}\u{438} \u{441}\u{43B}\u{43E}\u{432}\u{43E} "${word}".`;
-    else document.getElementById("result").textContent = `C.A.S.S.I.E. \u{43D}\u{435} \u{43C}\u{43E}\u{436}\u{435} \u{441}\u{43A}\u{430}\u{437}\u{430}\u{442}\u{438} \u{441}\u{43B}\u{43E}\u{432}\u{43E} "${word}".`;
+    if (validWords.includes(word.trim().toUpperCase())) {
+        document.getElementById("result").textContent = `C.A.S.S.I.E. \u{43C}\u{43E}\u{436}\u{435} \u{441}\u{43A}\u{430}\u{437}\u{430}\u{442}\u{438} \u{441}\u{43B}\u{43E}\u{432}\u{43E} "${word}".`;
+        document.getElementById("result").style.color = "green";
+    } else {
+        document.getElementById("result").textContent = `C.A.S.S.I.E. \u{43D}\u{435} \u{43C}\u{43E}\u{436}\u{435} \u{441}\u{43A}\u{430}\u{437}\u{430}\u{442}\u{438} \u{441}\u{43B}\u{43E}\u{432}\u{43E} "${word}".`;
+        document.getElementById("result").style.color = "red";
+    }
 }
 
 //# sourceMappingURL=Checker.672d4772.js.map

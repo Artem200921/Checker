@@ -1,9 +1,15 @@
 *, :before, :after {
   box-sizing: border-box;
+  transition: all 1s;
 }
 
 body {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 70vh;
   font-family: Gilroy;
+  display: flex;
 }
 
 a {
@@ -30,7 +36,7 @@ ul, menu {
 }
 
 .container {
-  max-width: 800px;
+  width: 500px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -45,7 +51,7 @@ p {
   font-size: 1.2em;
 }
 
-input[type="text"] {
+#wordInput {
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 100%;
@@ -69,6 +75,8 @@ button:hover {
 #result {
   margin-top: 20px;
   font-size: 1.2em;
+  font-weight: bold;
+  animation: .5s ease-in-out fadeIn;
 }
 
 @media (width <= 600px) {
@@ -80,7 +88,7 @@ button:hover {
     font-size: 1.5em;
   }
 
-  input[type="text"] {
+  #wordInput {
     font-size: 1em;
   }
 
@@ -109,13 +117,116 @@ p {
   color: #555;
 }
 
-input[type="text"] {
+#wordInput {
   font-size: 1em;
   transition: border-color .3s;
 }
 
-input[type="text"]:focus {
+#wordInput:focus {
   border-color: #007bff;
   outline: none;
+}
+
+@media (width <= 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #wordInput {
+    padding: 8px;
+    font-size: 1em;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  #result {
+    font-size: 1em;
+  }
+
+  .container {
+    border-radius: 6px;
+    padding: 15px;
+  }
+
+  h1, p {
+    margin-bottom: 15px;
+  }
+
+  #wordInput {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e4e6e7;
+    background-color: #181a1b;
+  }
+
+  .container {
+    background-color: #23272a;
+    box-shadow: 0 2px 10px #0009;
+  }
+
+  h1 {
+    color: #4da3ff;
+  }
+
+  p {
+    color: #b0b3b8;
+  }
+
+  #wordInput {
+    color: #e4e6e7;
+    background-color: #23272a;
+    border: 1px solid #444;
+  }
+
+  #wordInput:focus {
+    border-color: #4da3ff;
+  }
+
+  button {
+    color: #181a1b;
+    background-color: #4da3ff;
+  }
+
+  button:hover {
+    color: #fff;
+    background-color: #007bff;
+  }
+
+  #result {
+    color: #e4e6e7;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=Checker.3a01df49.css.map */
